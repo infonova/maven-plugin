@@ -95,11 +95,12 @@ public class MavenFingerprinter extends MavenReporter {
     public boolean postExecute(MavenBuildProxy build, MavenProject pom, MojoInfo mojo, BuildListener listener, Throwable error) throws InterruptedException, IOException {
         // TODO (kutzi, 2011/09/06): it should be perfectly safe to move all these records to the
         // postBuild method as artifacts should only be added by mojos, but never removed/modified.
-		record(pom.getArtifacts(),used);
+		/*
+        record(pom.getArtifacts(),used);
         record(pom.getArtifact(),produced);
         record(pom.getAttachedArtifacts(),produced);
         record(pom.getGroupId() + ":" + pom.getArtifactId(),pom.getFile(),produced);
-
+*/
         return true;
     }
 
@@ -107,10 +108,11 @@ public class MavenFingerprinter extends MavenReporter {
      * Sends the collected fingerprints over to the master and record them.
      */
     public boolean postBuild(MavenBuildProxy build, MavenProject pom, BuildListener listener) throws InterruptedException, IOException {
-        
+        /*
         recordParents(build, pom, listener);
         
         build.executeAsync(new PostBuildCallable());
+        */
         return true;
     }
 
