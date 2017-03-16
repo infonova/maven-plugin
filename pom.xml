@@ -64,6 +64,27 @@ THE SOFTWARE.
     <argLine />
   </properties>
 
+  <scm>
+    <connection>scm:git:https://github.com/infonova/maven-plugin.git</connection>
+    <developerConnection>scm:git:https://github.com/infonova/maven-plugin.git</developerConnection>
+    <url>https://github.com/infonova/maven-plugin</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>nexus-infonova</id>
+      <name>Nexus at Infonova</name>
+      <url>http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>nexus-infonova</id>
+      <name>Nexus at Infonova</name>
+      <url>http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-snapshots/</url>
+      <uniqueVersion>false</uniqueVersion>
+    </snapshotRepository>
+  </distributionManagement>
+
   <issueManagement>
     <system>jira</system>
     <url>https://issues.jenkins-ci.org/browse/JENKINS/component/15487</url>
@@ -399,7 +420,7 @@ THE SOFTWARE.
           <artifactId>guice</artifactId>
         </exclusion>
       </exclusions>
-    </dependency>  
+    </dependency>
     <dependency>
       <groupId>org.apache.maven</groupId>
       <artifactId>maven-compat</artifactId>
@@ -927,26 +948,17 @@ THE SOFTWARE.
 
     </plugins>
   </build>
-
-
   <repositories>
-    <repository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </repository>
+      <repository>
+          <id>repo.jenkins-ci.org</id>
+          <url>https://repo.jenkins-ci.org/public/</url>
+      </repository>
   </repositories>
   <pluginRepositories>
-    <pluginRepository>
-      <id>repo.jenkins-ci.org</id>
-      <url>https://repo.jenkins-ci.org/public/</url>
-    </pluginRepository>
+      <pluginRepository>
+          <id>repo.jenkins-ci.org</id>
+          <url>https://repo.jenkins-ci.org/public/</url>
+      </pluginRepository>
   </pluginRepositories>
-
-  <scm>
-    <connection>scm:git:git://github.com/jenkinsci/maven-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:jenkinsci/maven-plugin.git</developerConnection>
-    <url>http://github.com/jenkinsci/maven-plugin</url>
-    <tag>maven-plugin-3.7</tag>
-  </scm>
 
 </project>
