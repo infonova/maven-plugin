@@ -94,6 +94,7 @@ public class MavenMultiModuleTest {
         return r;
     }
 
+    @Ignore
     @Test public void incrementalMultiModMaven() throws Exception {
         ToolInstallations.configureDefaultMaven("apache-maven-2.2.1", MavenInstallation.MAVEN_21);
         MavenModuleSet m = j.jenkins.createProject(MavenModuleSet.class, "p");

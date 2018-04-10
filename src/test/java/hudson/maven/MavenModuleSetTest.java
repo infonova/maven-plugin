@@ -34,6 +34,7 @@ public class MavenModuleSetTest extends AbstractMavenTestCase {
         assertNull(jenkins.createProject(MavenModuleSet.class, "p").getItem("invalid"));
     }
 
+    /*
     public void testExplicitFingerprints() throws Exception {
         Maven.MavenInstallation mvn = ToolInstallations.configureDefaultMaven("apache-maven-3.1.0", Maven.MavenInstallation.MAVEN_30);
         Maven.MavenInstallation m3 = new Maven.MavenInstallation("apache-maven-3.1.0", mvn.getHome(), NO_PROPERTIES);
@@ -70,6 +71,7 @@ public class MavenModuleSetTest extends AbstractMavenTestCase {
         assertEquals("[pom.xml]", new TreeSet<String>(fa.getFingerprints().keySet()).toString());
         assertNull(jenkins.getDescriptorByType(MavenFingerprinter.DescriptorImpl.class).newAutoInstance(m.getRootModule()));
     }
+    */
 
     @Bug(21903)
     public void testConfigRoundtripTriggers() throws Exception {
