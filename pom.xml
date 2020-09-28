@@ -35,7 +35,7 @@ THE SOFTWARE.
 
   <groupId>org.jenkins-ci.main</groupId><!-- for historical reason, this plugin has a different groupId -->
   <artifactId>maven-plugin</artifactId><!-- for the same reason, artifactId is against the convention -->
-  <version>3.7-INFONOVA-1</version>
+  <version>3.7-INFONOVA-2-SNAPSHOT</version>
   <packaging>hpi</packaging>
 
   <name>Maven Integration plugin</name>
@@ -68,7 +68,7 @@ THE SOFTWARE.
     <connection>scm:git:https://github.com/infonova/maven-plugin.git</connection>
     <developerConnection>scm:git:https://github.com/infonova/maven-plugin.git</developerConnection>
     <url>https://github.com/infonova/maven-plugin</url>
-    <tag>maven-plugin-3.7-INFONOVA-1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <distributionManagement>
